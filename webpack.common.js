@@ -3,7 +3,10 @@ const path = require('path')
 
 module.exports = {
   // devtool: 'none', // no eval()
-  entry: "./src/js/main.js",
+  entry: {
+    main: "./src/js/main.js",
+    vendor: './src/js/vendor/vendor.js'  
+  },
   plugins: [new HtmlWebpackPlugin({
     template: './src/index.html'
   })],

@@ -12,13 +12,6 @@ module.exports = {
   })],
   module: {
     rules: [{
-        test: /\.css$/,
-        use: [
-          'style-loader', // Inject styles into DOM
-          'css-loader'    // Turns css into commonjs
-        ]
-      },
-      {
         test: /\.html$/,
         use: ['html-loader']
       },
@@ -27,7 +20,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[hash].[ext]',
+            name: '[name].[ext]',
             outputPath: 'img'
           }
         }

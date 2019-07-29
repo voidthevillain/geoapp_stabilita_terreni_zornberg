@@ -294,6 +294,36 @@
   </div>
   <!-- #endregion -->
 
+  <!-- #region input check modal -->
+  <!-- Button trigger modal -->
+  <button id="btn-toggle-alert" type="button" class="btn btn-primary hidden" data-toggle="modal"
+    data-target="#inputCheckModal"></button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="inputCheckModal" tabindex="-1" role="dialog" aria-labelledby="inputCheckModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inputCheckModalLabel">Attenzione</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="input-check-modal-body" class="modal-body">
+          Prego completare il campo <strong>Profondità piano di posa</strong> con un valore valido.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip"
+            data-placement="left" title="Non effettuerà il calcolo">Esci</button>
+          <button id="btn-go-to-field" type="button" class="btn btn-primary" data-dismiss="modal">Vai al
+            campo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- #endregion -->
+
   <!-- #region scripts -->
   <script src="./js/vendor/jquery.min.js"></script>
   <script src="./js/vendor/popper.min.js"></script>

@@ -17,7 +17,6 @@ function bindEventHandlers() {
   btn_print.onclick = printFile
   // btn_help.onclick = helpModal
   btn_calculate.onclick = calculate
-  console.log('hellu')
 }
 
 function initApp() {

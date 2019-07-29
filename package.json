@@ -1,0 +1,45 @@
+{
+  "name": "geoapp_stabilita_terreno_zornberg",
+  "version": "1.0.0",
+  "description": "Stabilità del Terreno - Pendio Indefinito con Rinforzo",
+  "main": "./js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voidthevillain/geoapp_stabilita_terreno_zornberg.git"
+  },
+  "keywords": [
+    "geoapp",
+    "geostru",
+    "stabilità",
+    "del",
+    "terreno",
+    "pendio",
+    "indefinito",
+    "con",
+    "rinforzo",
+    "stabilità",
+    "del",
+    "terreno",
+    "Zornberg",
+    "fattore",
+    "di",
+    "sicurezza",
+    "rapporto",
+    "tra",
+    "forze",
+    "di",
+    "attrito",
+    "stabilizzanti",
+    "e",
+    "instabilizzanti"
+  ],
+  "author": "Mihai Filip (GeoStru)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voidthevillain/geoapp_stabilita_terreno_zornberg/issues"
+  },
+  "homepage": "https://github.com/voidthevillain/geoapp_stabilita_terreno_zornberg#readme"
+}

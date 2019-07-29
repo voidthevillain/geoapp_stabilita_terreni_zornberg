@@ -1,15 +1,15 @@
-const { saveAs } = require('file-saver')
-const { calcoloW, calcoloFSTot, calcoloTamm, calcoloTp, calcoloN, calcoloS, calcoloFSr } = require('../functions/zornberg.functions')
-const { rad, sen, cos, tan } = require('./ang.util')
+import { saveAs } from 'file-saver'
+import { calcoloW, calcoloFSTot, calcoloTamm, calcoloTp, calcoloN, calcoloS, calcoloFSr } from '../functions/zornberg.functions'
+import { rad, sen, cos, tan } from './ang.util'
 // const { createDocument } = require('./mod-print')
  
-// Buttons
-const btn_new = document.querySelector('#btn-new')
-const btn_open = document.querySelector('#btn-open')
-const btn_save = document.querySelector('#btn-save')
-const btn_print = document.querySelector('#btn-print')
-const btn_help = document.querySelector('#btn-help')
-const btn_calculate = document.querySelector('#btn-calculate')
+// Buttons 
+export const btn_new = document.querySelector('#btn-new')
+export const btn_open = document.querySelector('#btn-open')
+export const btn_save = document.querySelector('#btn-save')
+export const btn_print = document.querySelector('#btn-print')
+export const btn_help = document.querySelector('#btn-help')
+export const btn_calculate = document.querySelector('#btn-calculate')
 const buttons = document.querySelectorAll('button')
 
 // File
@@ -76,11 +76,11 @@ function initData() {
 }
 
 // Event handlers
-function newFile() {
+export function newFile() {
   return inputs.forEach(e => e.value = '') && outputs.forEach(e => e.value = '')
 }
 
-function showFileDialog() {
+export function showFileDialog() {
   return (() => {
     input_file.click()
 
@@ -114,7 +114,7 @@ function openFile(e) {
   })(e)
 }
 
-function saveFile() {
+export function saveFile() {
   return (() => {
     btn_save_modal.click()
 
@@ -152,13 +152,13 @@ function saveFile() {
   })()
 }
 
-function printFile() {
+export function printFile() {
   return (() => {
     createDocument()
   })()
 }
 
-function calculate() {
+export function calculate() {
   return (() => {
     initData()
 
@@ -187,15 +187,15 @@ function calculate() {
 }
 
 // Exports
-exports.btn_new = btn_new
-exports.btn_open = btn_open
-exports.btn_save = btn_save
-exports.btn_print = btn_print
-exports.btn_help = btn_new
-exports.btn_calculate = btn_calculate
-exports.newFile = newFile
-exports.showFileDialog = showFileDialog
-exports.openFile = openFile
-exports.saveFile = saveFile
-exports.printFile = printFile
-exports.calculate = calculate
+// exports.btn_new = btn_new
+// exports.btn_open = btn_open
+// exports.btn_save = btn_save
+// exports.btn_print = btn_print
+// exports.btn_help = btn_new
+// exports.btn_calculate = btn_calculate
+// exports.newFile = newFile
+// exports.showFileDialog = showFileDialog
+// exports.openFile = openFile
+// exports.saveFile = saveFile
+// exports.printFile = printFile
+// exports.calculate = calculate

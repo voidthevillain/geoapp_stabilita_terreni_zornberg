@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -5,9 +6,12 @@ module.exports = {
   // devtool: 'none', // no eval()
   entry: "./src/js/main.js",
   output: {
-    filename: 'main.js',
+    filename: 'main.[contentHash].js',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [new HtmlWebpackPlugin({
+    template: './src/index.html'
+  })],
   module: {
     rules: [{
         test: /\.css$/,

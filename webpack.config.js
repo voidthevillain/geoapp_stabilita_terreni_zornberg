@@ -9,10 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          'style-loader', // Inject styles into DOM
+          'css-loader'    // Turns css into commonjs
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,

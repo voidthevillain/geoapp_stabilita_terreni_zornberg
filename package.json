@@ -54,7 +54,10 @@
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "docx": "^5.0.0-rc4",
-    "file-saver": "^2.0.2"
+    "file-saver": "^2.0.2",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }

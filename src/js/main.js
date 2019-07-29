@@ -5,9 +5,10 @@ import '@fortawesome/fontawesome-free/js/brands'
 import '../css/bootstrap.min.css'
 import '../css/normalize.css'
 import '../css/main.css'
+import 'bootstrap'
 
-const { btn_new, btn_open, btn_save, btn_print, btn_help, btn_calculate } = require('./utils/dom.util')
-const { newFile, showFileDialog, saveFile, printFile, calculate } = require('./utils/dom.util')
+import { btn_new, btn_open, btn_save, btn_print, btn_help, btn_calculate } from './utils/dom.util'
+import { newFile, showFileDialog, saveFile, printFile, calculate } from './utils/dom.util'
 
 function bindEventHandlers() {
   btn_new.onclick = newFile

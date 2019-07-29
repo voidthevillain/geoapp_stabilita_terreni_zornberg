@@ -45,6 +45,8 @@
   },
   "homepage": "https://github.com/voidthevillain/geoapp_stabilita_terreno_zornberg#readme",
   "devDependencies": {
+    "css-loader": "^3.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6"
   },

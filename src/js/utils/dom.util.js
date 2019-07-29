@@ -1,5 +1,5 @@
 import { saveAs } from 'file-saver'
-import { calcoloW, calcoloFSTot, calcoloTamm, calcoloTp, calcoloN, calcoloS, calcoloFSr } from '../functions/zornberg.functions'
+import { calcoloW, calcoloFSTot, calcoloTamm, calcoloTp, calcoloN, calcoloS, calcoloFSr } from '../functions/zornberg.func'
 import { rad, sen, cos, tan } from './ang.util'
 // const { createDocument } = require('./mod-print')
  

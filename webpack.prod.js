@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -21,6 +22,14 @@ module.exports = merge(common, {
   }),
   new CleanWebpackPlugin({
     cleanOnceBeforeBuildPatterns: ['main.*', 'img/*', 'vendor*']
+  }),
+  new HtmlWebpackPlugin({
+    template: './src/index.html',
+    minify: {
+      removeAttributeQuotes: true,
+      collapseWhitespace: true,
+      removeComments: true
+    }
   })],
   module: {
     rules: [

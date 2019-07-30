@@ -3,5 +3,17 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '../../css/bootstrap.min.css'
 import '../../css/normalize.css'
 import '../../css/main.css'
-import 'bootstrap'
-// import '../vendor/bootstrap.min.js'
+// import 'bootstrap'
+
+// Overlay (spinner)
+const overlay = document.querySelector('#overlay')
+window.addEventListener('load', function () {
+  setTimeout(() => {
+    overlay.parentNode.removeChild(overlay)
+  }, 500)
+})
+
+// Tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

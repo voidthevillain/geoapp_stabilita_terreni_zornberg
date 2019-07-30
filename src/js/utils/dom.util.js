@@ -2,7 +2,7 @@ import { saveAs } from 'file-saver'
 import { calcoloW, calcoloFSTot, calcoloTamm, calcoloTp, calcoloN, calcoloS, calcoloFSr } from '../functions/zornberg.func'
 import { rad, sen, cos, tan } from './ang.util'
 import { createDocument } from './print.util'
- 
+
 // Buttons 
 export const btn_new = document.querySelector('#btn-new')
 export const btn_open = document.querySelector('#btn-open')

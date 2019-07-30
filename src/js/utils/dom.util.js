@@ -83,7 +83,10 @@ function initData() {
 
 // Event handlers
 export function newFile() {
-  return inputs.forEach(e => e.value = '') && outputs.forEach(e => e.value = '')
+  return (() => {
+    inputs.forEach(e => e.value = '')
+    outputs.forEach(e => e.value = '')
+  })()
 }
 
 export function showFileDialog() {

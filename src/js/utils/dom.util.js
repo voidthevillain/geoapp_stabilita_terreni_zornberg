@@ -2,6 +2,8 @@ import { saveAs } from 'file-saver'
 import { calcoloW, calcoloFSTot, calcoloTamm, calcoloTp, calcoloN, calcoloS, calcoloFSr } from '../functions/zornberg.func'
 import { rad, sen, cos, tan } from './ang.util'
 import { createDocument } from './print.util'
+import { parse } from './parse.util'
+import { isValid } from './validate.util'
 
 // Buttons 
 export const btn_new = document.querySelector('#btn-new')
@@ -55,24 +57,28 @@ const btn_ext_gap = document.querySelector('#btn-ext-gap')
 const file_name = document.querySelector('#file-name')
 const file_ext = document.querySelector('#file-ext')
 
+const btn_toggle_alert = document.querySelector('#btn-toggle-alert')
+const btn_go_to_field = document.querySelector('#btn-go-to-field')
+const alert_modal_body = document.querySelector('#input-check-modal-body')
+
 // Values
 export let y_terr, c_terr, phi, b, t_terr, l, lt, delta, t_nom, fs1, fs2, fs3, fs4
 export let tan_phi, w, sen_b, cos_b, tan_b, tan_delta, fs_tot, t_amm, tp, n, s, fsr
 
 function initData() {
-  y_terr = parseFloat(input_y_terr.value)
-  c_terr = parseFloat(input_c_terr.value)
-  phi = parseFloat(input_phi.value)
-  b = parseFloat(input_b.value)
-  t_terr = parseFloat(input_t_terr.value)
-  l = parseFloat(input_l.value)
-  lt = parseFloat(input_lt.value)
-  delta = parseFloat(input_delta.value)
-  t_nom = parseFloat(input_t_nom.value)
-  fs1 = parseFloat(input_fs_1.value)
-  fs2 = parseFloat(input_fs_2.value)
-  fs3 = parseFloat(input_fs_3.value)
-  fs4 = parseFloat(input_fs_4.value)
+  y_terr = parse(input_y_terr.value)
+  c_terr = parse(input_c_terr.value)
+  phi = parse(input_phi.value)
+  b = parse(input_b.value)
+  t_terr = parse(input_t_terr.value)
+  l = parse(input_l.value)
+  lt = parse(input_lt.value)
+  delta = parse(input_delta.value)
+  t_nom = parse(input_t_nom.value)
+  fs1 = parse(input_fs_1.value)
+  fs2 = parse(input_fs_2.value)
+  fs3 = parse(input_fs_3.value)
+  fs4 = parse(input_fs_4.value)
 }
 
 // Event handlers
@@ -161,6 +167,23 @@ export function printFile() {
 export function calculate() {
   return (() => {
     initData()
+
+    for (let i = 0; i < inputs.length; i++) {
+      if (!isValid(parse(inputs[i].value))) {
+        alert_modal_body.innerHTML = 'Il valore inserito non è valido'
+        btn_toggle_alert.click()
+        btn_go_to_field.onclick = () => {
+          $('html, body').animate({
+            scrollTop: $(inputs[i]).offset().top - 20
+          }, 1000)
+          setTimeout(() => {
+            inputs[i].focus()
+          }, 1000)
+        }
+        return
+      }
+    }
+
 
     w = calcoloW(y_terr, l, t_terr)
     fs_tot = calcoloFSTot(fs1, fs2, fs3, fs4)

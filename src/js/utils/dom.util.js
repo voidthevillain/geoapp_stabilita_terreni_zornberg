@@ -56,8 +56,8 @@ const file_name = document.querySelector('#file-name')
 const file_ext = document.querySelector('#file-ext')
 
 // Values
-let y_terr, c_terr, phi, b, t_terr, l, lt, delta, t_nom, fs1, fs2, fs3, fs4
-let tan_phi, w, sen_b, cos_b, tan_b, tan_delta, fs_tot, t_amm, tp, n, s, fsr
+export let y_terr, c_terr, phi, b, t_terr, l, lt, delta, t_nom, fs1, fs2, fs3, fs4
+export let tan_phi, w, sen_b, cos_b, tan_b, tan_delta, fs_tot, t_amm, tp, n, s, fsr
 
 function initData() {
   y_terr = parseFloat(input_y_terr.value)

@@ -3,6 +3,8 @@
  * @param {any} value value to parse
  * @returns {number} parsed value
  */
-export function parse(value) {
+function parse(value) {
   return parseFloat(value)
 }
+
+exports.parse = parse
